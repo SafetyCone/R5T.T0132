@@ -1,5 +1,7 @@
 ﻿using System;
 
+using R5T.T0143;
+
 
 namespace R5T.T0132
 {
@@ -8,7 +10,9 @@ namespace R5T.T0132
     /// The marker attribute is useful for surveying for draft functionality interfaces and building a catalogue of draft functionality as a kind of TODO list.
     /// </summary>
     [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-    public class DraftFunctionalityMarkerAttribute : Attribute
+    [MarkerAttributeMarker]
+    public class DraftFunctionalityMarkerAttribute : Attribute,
+        IMarkerAttributeMarker
     {
         private readonly bool zIsFunctionality;
         /// <summary>

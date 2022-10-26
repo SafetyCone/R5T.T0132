@@ -14,24 +14,24 @@ namespace R5T.T0132
     public class DraftFunctionalityMarkerAttribute : Attribute,
         IMarkerAttributeMarker
     {
-        private readonly bool zIsFunctionality;
+        private readonly bool zIsDraftFunctionality;
         /// <summary>
         /// Allows specifying that an interface is *not* a functionality interface.
         /// This is useful for marking interfaces that end up canonical functionality code file locations, but are not functionality interfaces.
         /// </summary>
-        public bool IsFunctionality
+        public bool IsDraftFunctionality
         {
             get
             {
-                return this.zIsFunctionality;
+                return this.zIsDraftFunctionality;
             }
         }
 
 
         public DraftFunctionalityMarkerAttribute(
-            bool isFunctionality = true)
+            bool isDraftFunctionality = true)
         {
-            this.zIsFunctionality = isFunctionality;
+            this.zIsDraftFunctionality = isDraftFunctionality;
         }
     }
 }

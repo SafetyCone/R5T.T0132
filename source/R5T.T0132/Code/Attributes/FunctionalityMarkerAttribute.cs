@@ -15,6 +15,7 @@ namespace R5T.T0132
         IMarkerAttributeMarker
     {
         private readonly bool zIsFunctionality;
+
         /// <summary>
         /// Allows specifying that an interface is *not* a functionality interface.
         /// This is useful for marking interfaces that end up canonical functionality code file locations, but are not functionality interfaces.
